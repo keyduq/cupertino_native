@@ -196,10 +196,8 @@ class _CNTabBarState extends State<CNTabBar> {
     if (call.method == 'valueChanged') {
       final args = call.arguments as Map?;
       final idx = (args?['index'] as num?)?.toInt();
-      if (idx != null && idx != _lastIndex) {
-        widget.onTap(idx);
-        _lastIndex = idx;
-      }
+      widget.onTap(idx);
+      _lastIndex = idx;
     }
     return null;
   }
